@@ -13,7 +13,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 /*:
  ## Add your code below
@@ -22,9 +22,21 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Draw Rectangle
+canvas.drawRectangle(bottomLeftX: 250, bottomLeftY: 100, width: 120, height: 450)
 
 
+// Draw Circles
+canvas.fillColor = Color.red
+canvas.drawEllipse(centreX: 310, centreY: 180, width: 120, height: 120)
+canvas.fillColor = Color.yellow
+canvas.drawEllipse(centreX: 310, centreY: 310, width: 120, height: 120)
+canvas.fillColor = Color.green
+canvas.drawEllipse(centreX: 310, centreY: 440, width: 120, height: 120)
+
+// Draw Rectangle
+canvas.fillColor = Color.black
+canvas.drawRectangle(bottomLeftX: 300, bottomLeftY: 0, width: 20, height: 100)
 
 /*:
  ## Use source control
