@@ -22,9 +22,24 @@ let canvas = Canvas(width: 400, height: 300)
  
  Use whitespace and comments as appropriate.
  */
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
+// Background
+canvas.fillColor = Color.black
+canvas.drawRectangle(centreX: 200, centreY: 150, width: 400, height: 300)
 
-
+// Draw Diagonal Lines
+canvas.defaultLineWidth = 21
+for x in stride(from: 0, through: 400, by: 50){
+    
+    // Make lines with x positions divisible by 100 red
+    if x % 100 == 0 {
+        canvas.lineColor = Color.red
+    } else {
+        canvas.lineColor = Color.orange
+    }
+    
+    canvas.drawLine(fromX: x, fromY: 0, toX: x+100, toY: 500)
+    canvas.drawLine(fromX: x, fromY: 400, toX: x-100, toY: 0)
+}
 
 /*:
  ## Use source control
